@@ -1,0 +1,22 @@
+{
+  "id": "chaobosun/glm-ocr-vllm",
+  "id_no": 115327231,
+  "title": "glm_ocr_vllm",
+  "code_file": "glm-ocr-vllm.ipynb",
+  "language": "python",
+  "kernel_type": "notebook",
+  "is_private": true,
+  "enable_gpu": true,
+  "enable_tpu": false,
+  "enable_internet": true,
+  "keywords": [
+    "gpu"
+  ],
+  "dataset_sources": [
+    "chaobosun/pages-to-ocr"
+  ],
+  "kernel_sources": [],
+  "competition_sources": [],
+  "model_sources": [],
+  "machine_shape": "NvidiaTeslaT4"
+}
