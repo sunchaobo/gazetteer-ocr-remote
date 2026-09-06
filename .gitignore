@@ -1,0 +1,6 @@
+# staging 数据与本地产物，不进 git
+data/
+temp/
+__pycache__/
+.DS_Store
+*.log

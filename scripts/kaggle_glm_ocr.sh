@@ -16,10 +16,11 @@ PDF="$(cd "$(dirname "$PDF")" && pwd)/$(basename "$PDF")"
 
 BASENAME=$(basename "$PDF" .pdf)
 PAGES_DIR="data/$BASENAME/pages"
-KAGGLE_DATA="data/kaggle_datasets/pages-to-ocr"
 # Kernel 目录随本脚本定位（仓库检出到任意路径均可；data/ 路径仍相对执行时的 cwd，即主仓根目录）
 REMOTE_ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 KERNEL_DIR="$REMOTE_ROOT/kaggle/glm-ocr-vllm"
+# Kaggle 数据集 staging 区跟新仓走（可被 KAGGLE_DATA 环境变量覆盖）
+KAGGLE_DATA="${KAGGLE_DATA:-$REMOTE_ROOT/data/kaggle_datasets/pages-to-ocr}"
 KERNEL_ID="chaobosun/glm-ocr-vllm"
 OUTPUT_DIR="temp/output"
 RESULTS_DIR="data/$BASENAME/results.glm"
