@@ -37,6 +37,7 @@ if ! $DOWNLOAD_ONLY; then
 
     if $NEED_UPDATE; then
         echo "=== 2/4 更新 Kaggle 数据集 ==="
+        mkdir -p "$KAGGLE_DATA"
         cp "$PDF" "$KAGGLE_DATA/original.pdf"
         kaggle datasets version -p "$KAGGLE_DATA" -m "update pages"
     else
